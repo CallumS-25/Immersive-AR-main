@@ -302,7 +302,6 @@ GameObject:
   - component: {fileID: 2504717527949599396}
   - component: {fileID: 6385439047099871758}
   - component: {fileID: 8062985322099507572}
-  - component: {fileID: 199893630478469542}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
@@ -393,20 +392,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &199893630478469542
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2842968658201847990}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03ace825ba57f70498c3161da5f4dfa8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _camera: {fileID: 0}
-  _canvas: {fileID: 2504717527949599396}
 --- !u!1 &3302606470565655709
 GameObject:
   m_ObjectHideFlags: 0
@@ -419,6 +404,8 @@ GameObject:
   - component: {fileID: -1150986740753915955}
   - component: {fileID: 7591754565265787532}
   - component: {fileID: 97672988594393677}
+  - component: {fileID: 8222488503515254945}
+  - component: {fileID: 8822996897773032187}
   m_Layer: 0
   m_Name: Mythical_Beast_Censer,_c._1736-1795_CE
   m_TagString: Untagged
@@ -620,6 +607,33 @@ MonoBehaviour:
   m_Elasticity: 0.15
   m_EnableElasticBreakLimit: 0
   m_ElasticBreakLimit: 0.5
+--- !u!114 &8222488503515254945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3302606470565655709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c341cc37b66afd428a06fc9d0d6bc0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ArtworkInfo: {fileID: 3935202575843145546}
+--- !u!114 &8822996897773032187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3302606470565655709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03ace825ba57f70498c3161da5f4dfa8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _camera: {fileID: 0}
+  _canvas: {fileID: 2504717527949599396}
 --- !u!1 &3764235846279895462
 GameObject:
   m_ObjectHideFlags: 0
@@ -1030,7 +1044,6 @@ GameObject:
   - component: {fileID: 2323344462849417942}
   - component: {fileID: 4196529450715982178}
   - component: {fileID: 5647656911862402305}
-  - component: {fileID: 4518058956905664290}
   m_Layer: 0
   m_Name: MBCInfo1 (Sphere)
   m_TagString: hasInfo
@@ -1126,21 +1139,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4518058956905664290
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7221840741883668507}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c341cc37b66afd428a06fc9d0d6bc0b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ArtworkInfo: {fileID: 3935202575843145546}
+  m_Radius: 3.2184465
+  m_Center: {x: 3.0098664e-17, y: 0.34552854, z: 9.4212756e-15}
 --- !u!1 &7352543280623814005
 GameObject:
   m_ObjectHideFlags: 0

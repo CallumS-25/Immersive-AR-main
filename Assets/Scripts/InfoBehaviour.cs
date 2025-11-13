@@ -11,7 +11,7 @@ public class InfoBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //ArtworkInfo.localScale = Vector3.Lerp(ArtworkInfo.localScale, desiredScale, Time.deltaTime * Speed);
+        ArtworkInfo.localScale = Vector3.Lerp(ArtworkInfo.localScale, desiredScale, Time.deltaTime * Speed);
     }
 
     public void OpenInfo()
