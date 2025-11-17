@@ -25,6 +25,7 @@ public class GazeInteract : MonoBehaviour
             else
             {
                 CloseAll();
+                Debug.LogWarning("Closing Info via Update");
             }
         }
     }
@@ -35,10 +36,12 @@ public class GazeInteract : MonoBehaviour
             if (info == desiredInfo)
             {
                 info.OpenInfo();
+                Debug.LogWarning("Opening Info via Gazeinteract");
             }
             else
             {
                 info.CloseInfo();
+                Debug.LogWarning("Closing Info via Gazeinteract");
             }
         }
     }
@@ -48,6 +51,8 @@ public class GazeInteract : MonoBehaviour
         foreach(InfoBehaviour info in infos)
         {
             info.CloseInfo();
+            Debug.LogWarning("Closing Info via GazeInteract");
+
         }
     }
 }
