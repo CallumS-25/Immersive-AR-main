@@ -318,7 +318,7 @@ RectTransform:
   m_GameObject: {fileID: 2842968658201847990}
   m_LocalRotation: {x: -0.0000001490116, y: -1.1999913e-11, z: -2.4709138e-10, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 35, y: 35, z: 35}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3935202575843145546}
@@ -404,7 +404,6 @@ GameObject:
   - component: {fileID: -1150986740753915955}
   - component: {fileID: 7591754565265787532}
   - component: {fileID: 97672988594393677}
-  - component: {fileID: 8222488503515254945}
   - component: {fileID: 8822996897773032187}
   m_Layer: 0
   m_Name: Mythical_Beast_Censer,_c._1736-1795_CE
@@ -607,19 +606,6 @@ MonoBehaviour:
   m_Elasticity: 0.15
   m_EnableElasticBreakLimit: 0
   m_ElasticBreakLimit: 0.5
---- !u!114 &8222488503515254945
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3302606470565655709}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c341cc37b66afd428a06fc9d0d6bc0b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ArtworkInfo: {fileID: 3935202575843145546}
 --- !u!114 &8822996897773032187
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -869,7 +855,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &2210409147605608592
 MonoBehaviour:
@@ -1044,6 +1030,7 @@ GameObject:
   - component: {fileID: 2323344462849417942}
   - component: {fileID: 4196529450715982178}
   - component: {fileID: 5647656911862402305}
+  - component: {fileID: 1243600789918782611}
   m_Layer: 0
   m_Name: MBCInfo1 (Sphere)
   m_TagString: hasInfo
@@ -1135,12 +1122,25 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Radius: 3.2184465
   m_Center: {x: 3.0098664e-17, y: 0.34552854, z: 9.4212756e-15}
+--- !u!114 &1243600789918782611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7221840741883668507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c341cc37b66afd428a06fc9d0d6bc0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ArtworkInfo: {fileID: 3935202575843145546}
 --- !u!1 &7352543280623814005
 GameObject:
   m_ObjectHideFlags: 0

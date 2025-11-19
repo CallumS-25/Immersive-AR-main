@@ -9,8 +9,15 @@ public class GazeInteract : MonoBehaviour
 
     void Start()
     {
-        infos = Object.FindObjectsByType<InfoBehaviour>(FindObjectsSortMode.None).ToList();
+        infos = FindObjectsOfType<InfoBehaviour>().ToList();
     }
+
+    public void ListItem(InfoBehaviour thisInfo)
+    {
+        infos.Add(thisInfo);
+        print(thisInfo);
+    }
+
 
     void Update()
     {
@@ -19,39 +26,40 @@ public class GazeInteract : MonoBehaviour
             GameObject go = hit.collider.gameObject;
             if (go.CompareTag("hasInfo"))
             {
-                OpenInfo(go.GetComponent<InfoBehaviour>());
-                print("HERE");
+                OpenGaze(go.GetComponent<InfoBehaviour>());
+                //print("HERE");
             }
             else
             {
-                CloseAll();
-                Debug.LogWarning("Closing Info via Update");
+                CloseGaze();
+                //Debug.LogWarning("Closing Info via Update");
             }
         }
     }
-    void OpenInfo(InfoBehaviour desiredInfo)
+    void OpenGaze(InfoBehaviour desiredInfo)
     {
+        print("OpenGaze Active!!");
         foreach (InfoBehaviour info in infos)
         {
             if (info == desiredInfo)
             {
                 info.OpenInfo();
-                Debug.LogWarning("Opening Info via Gazeinteract");
+                //Debug.LogWarning("Opening Info via Gazeinteract");
             }
             else
             {
                 info.CloseInfo();
-                Debug.LogWarning("Closing Info via Gazeinteract");
+                //Debug.LogWarning("Closing Info via Gazeinteract");
             }
         }
     }
 
-    void CloseAll()
+    void CloseGaze()
     {
         foreach(InfoBehaviour info in infos)
         {
             info.CloseInfo();
-            Debug.LogWarning("Closing Info via GazeInteract");
+            //Debug.LogWarning("Closing Info via GazeInteract");
 
         }
     }
