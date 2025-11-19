@@ -25,13 +25,13 @@ public class InfoBehaviour : MonoBehaviour
         ArtworkInfo.localScale = Vector3.Lerp(ArtworkInfo.localScale, desiredScale, Time.deltaTime * Speed);
         //Debug.LogWarning("InfoBehaviour is changing scale");
 
-        Debug.LogError("Scale is currently: " + desiredScale);
+        //Debug.LogError("Scale is currently: " + desiredScale);
 
     }
 
     public void OpenInfo()
     {
-        Debug.LogWarning("Test");
+        //Debug.LogWarning("Test");
         desiredScale = Vector3.one;
         //Debug.LogWarning("Opening Info via InfoBehaviour");
     }

@@ -1,5 +1,9 @@
+using NUnit.Framework;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.XR.Interaction.Toolkit.UI;
 
 public class FaceCamera : MonoBehaviour
 {
@@ -8,6 +12,10 @@ public class FaceCamera : MonoBehaviour
 
     [SerializeField]
     private Canvas _canvas;
+
+    //[SerializeField]
+    //private List<Canvas> _canvasList;
+
     Transform cam;
     Vector3 targetAngle = Vector3.zero;
 
