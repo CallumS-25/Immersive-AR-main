@@ -1,0 +1,8 @@
+Model Information:
+* title:	Owl 'Zun' wine vessel, 13th-12th century BCE
+* source:	https://sketchfab.com/3d-models/owl-zun-wine-vessel-13th-12th-century-bce-ca77ae1351ca4b1c9a7d403e09e1c4af
+* author:	Minneapolis Institute of Art (https://sketchfab.com/artsmia)
+
+Model License:
+* license type:	CC0-1.0 (http://creativecommons.org/publicdomain/zero/1.0/)
+* requirements:	Credit is not mandatory. Commercial use is allowed.
