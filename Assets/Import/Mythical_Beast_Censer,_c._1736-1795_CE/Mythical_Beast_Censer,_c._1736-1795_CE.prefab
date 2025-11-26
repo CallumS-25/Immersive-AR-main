@@ -1046,7 +1046,7 @@ GameObject:
   - component: {fileID: 853302032115071427}
   - component: {fileID: 7045336952815822067}
   - component: {fileID: 5523753793526542584}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: MBCInfo3 (Text)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1137,8 +1137,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Special thanks for Minneapolis Institute of Art for the 3D model of this
-    artwork. \n\nYou can find more of their preserved artwork on https://new.artsmia.org/"
+  m_text: This work is based on "Mythical Beast Censer, c. 1736-1795 CE" (https://sketchfab.com/3d-models/mythical-beast-censer-c-1736-1795-ce-255956ccdd43459bb5c50810e3edb396)
+    by Minneapolis Institute of Art (https://sketchfab.com/artsmia) licensed under
+    CC-BY-SA-4.0 (http://creativecommons.org/licenses/by-sa/4.0/)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1165,10 +1166,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 19.5
-  m_fontSizeBase: 36
+  m_fontSize: 15
+  m_fontSizeBase: 15
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -1203,7 +1204,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -14.477635, y: -6.0503592, z: 0.47928333, w: -0.13813186}
+  m_margin: {x: -14.477635, y: -6.0503592, z: -7.318331, w: -0.13813186}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   _SortingLayer: 0
@@ -1407,7 +1408,7 @@ GameObject:
   - component: {fileID: 3935202575843145546}
   - component: {fileID: 3021714589458685088}
   - component: {fileID: 2210409147605608592}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: MBCInfo1 (Text)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2339,7 +2340,7 @@ GameObject:
   - component: {fileID: 7012473778285181000}
   - component: {fileID: 1926808963125327955}
   - component: {fileID: 9104063997761501635}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: MBCInfo2 (Text)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2430,8 +2431,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Though now preserved as an art piece, this used to be a Censer! Burning
-    incense to ward off evil spirits and acts as purification.
+  m_text: "Though now preserved as an art piece, this used to be a Censer! \n\nBurning
+    incense to ward off evil spirits and acts as purification."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2458,10 +2459,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
-  m_fontSizeBase: 36
+  m_fontSize: 15
+  m_fontSizeBase: 15
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -2496,7 +2497,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0.38380814, y: -6.0503592, z: 0.47928333, w: -0.13813186}
+  m_margin: {x: 0.38380814, y: -6.0503592, z: -1.7702131, w: -0.13813186}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   _SortingLayer: 0
