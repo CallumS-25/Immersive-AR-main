@@ -1217,7 +1217,7 @@ MonoBehaviour:
   - {fileID: 3302606470565655709, guid: 73b14a3e60804ec48909e5a6ef42f84a, type: 3}
   - {fileID: 7004059392937203757, guid: 61eeb19d9ab7dab4db6942727dc9b28d, type: 3}
   - {fileID: 5777263074641516636, guid: 1d40b1f806e815245bb8fdc4c2478dfd, type: 3}
-  - {fileID: 7744229023023477181, guid: c1b4773232c1bdb45b9ac147c94b0745, type: 3}
+  - {fileID: 2047896916700040625, guid: 7d36eace625fc384ca8c8999a246d0db, type: 3}
   - {fileID: 5239885138427989381, guid: 894d54703eb1549009ad9f909fc154d7, type: 3}
   - {fileID: 7190559763459483146, guid: cec25213e5ba74da1ae7d3e2036e000d, type: 3}
   m_SpawnVisualizationPrefab: {fileID: 0}
@@ -3067,7 +3067,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 100}
+  m_AnchoredPosition: {x: 0.00013064624, y: 100}
   m_SizeDelta: {x: 1225, y: 200}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1262986092
@@ -3379,7 +3379,7 @@ GameObject:
   - component: {fileID: 1441072527}
   - component: {fileID: 1441072526}
   m_Layer: 5
-  m_Name: Button (Baboon_Moon_God)
+  m_Name: Button (Kui_Xing)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3837,8 +3837,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 150, y: 150}
+  m_AnchoredPosition: {x: 0, y: -0.0000026226}
+  m_SizeDelta: {x: 146.1053, y: 161.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1960406494
 CanvasRenderer:
@@ -3868,7 +3868,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 998ca43dd127c2a4dbf19745ccb8bc4d, type: 3}
+  m_Texture: {fileID: 2800000, guid: ef48ac47bef86334f9d65c1e067983b2, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
