@@ -1,0 +1,8 @@
+Model Information:
+* title:	Saint Benedict of Palermo, c. 1734 CE
+* source:	https://sketchfab.com/3d-models/saint-benedict-of-palermo-c-1734-ce-74e8a0afa68a4eb49961de63d90b4416
+* author:	Minneapolis Institute of Art (https://sketchfab.com/artsmia)
+
+Model License:
+* license type:	CC0-1.0 (http://creativecommons.org/publicdomain/zero/1.0/)
+* requirements:	Credit is not mandatory. Commercial use is allowed.
