@@ -68,6 +68,33 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.ARStarterAssets
         }
 
         [SerializeField]
+        [Tooltip("The menu with quizzes to answer.")]
+        GameObject m_QuizMenu;
+
+
+        /// <summary>
+        /// The menu with quizzes to answer.
+        /// </summary>
+        public GameObject quizMenu
+        {
+            get => m_QuizMenu;
+            set => m_QuizMenu = value;
+        }
+
+        [SerializeField]
+        [Tooltip("The animator for the quiz menu.")]
+        Animator m_QuizMenuAnimator;
+
+        /// <summary>
+        /// The animator for the quiz menu.
+        /// </summary>
+        public Animator quizMenuAnimator
+        {
+            get => m_QuizMenuAnimator;
+            set => m_QuizMenuAnimator = value;
+        }
+
+        [SerializeField]
         [Tooltip("The object spawner component in charge of spawning new objects.")]
         ObjectSpawner m_ObjectSpawner;
 
@@ -87,10 +114,36 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.ARStarterAssets
         /// <summary>
         /// Button that closes the object creation menu.
         /// </summary>
+        public Button quizCancelButton
+        {
+            get => m_QuizCancelButton;
+            set => m_QuizCancelButton = value;
+        }
+
+        [SerializeField]
+        [Tooltip("Button that closes the object creation menu.")]
+        Button m_QuizCancelButton;
+
+        /// <summary>
+        /// Button that closes the object creation menu.
+        /// </summary>
         public Button cancelButton
         {
             get => m_CancelButton;
             set => m_CancelButton = value;
+        }
+
+        [SerializeField]
+        [Tooltip("Button that opens the quiz menu")]
+        Button m_QuizButton;
+
+        /// <summary>
+        /// Button that opens the quiz menu.
+        /// </summary>
+        public Button quizButton
+        {
+            get => m_QuizButton;
+            set => m_QuizButton = value;
         }
 
         [SerializeField]
@@ -120,6 +173,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.ARStarterAssets
         }
 
         bool m_ShowObjectMenu;
+        bool m_ShowQuizMenu;
 
         void OnEnable()
         {
@@ -127,15 +181,20 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.ARStarterAssets
             m_CreateButton.onClick.AddListener(ShowMenu);
             m_CancelButton.onClick.AddListener(HideMenu);
             m_DeleteButton.onClick.AddListener(DeleteFocusedObject);
+            m_QuizButton.onClick.AddListener(ShowQuizMenu);
+            m_QuizCancelButton.onClick.AddListener(HideMenu);
         }
 
         void OnDisable()
         {
             m_TapStartPositionInput.DisableDirectActionIfModeUsed();
             m_ShowObjectMenu = false;
+            m_ShowQuizMenu = false;
             m_CreateButton.onClick.RemoveListener(ShowMenu);
             m_CancelButton.onClick.RemoveListener(HideMenu);
             m_DeleteButton.onClick.RemoveListener(DeleteFocusedObject);
+            m_QuizButton.onClick.RemoveListener(ShowQuizMenu);
+            m_QuizCancelButton.onClick.RemoveListener(HideMenu);
         }
 
         void Start()
@@ -149,23 +208,39 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.ARStarterAssets
             {
                 m_CreateButton.gameObject.SetActive(false);
                 m_DeleteButton.gameObject.SetActive(false);
+                m_QuizButton.gameObject.SetActive(false);
                 var isPointerOverUI = EventSystem.current != null && EventSystem.current.IsPointerOverGameObject(-1);
                 if (!isPointerOverUI && m_TapStartPositionInput.TryReadValue(out _))
                 {
                     HideMenu();
                 }
             }
+
+            if (m_ShowQuizMenu)
+            {
+                m_CreateButton.gameObject.SetActive(false);
+                m_DeleteButton.gameObject.SetActive(false);
+                m_QuizButton.gameObject.SetActive(false);
+                var isPointerOverUI = EventSystem.current != null && EventSystem.current.IsPointerOverGameObject(-1);
+                if (!isPointerOverUI && m_TapStartPositionInput.TryReadValue(out _))
+                {
+                    HideMenu();
+                }
+            }
+
             else if (m_InteractionGroup is not null)
             {
                 var currentFocusedObject = m_InteractionGroup.focusInteractable;
-                if (currentFocusedObject != null && (!m_DeleteButton.isActiveAndEnabled || m_CreateButton.isActiveAndEnabled))
+                if (currentFocusedObject != null && (!m_DeleteButton.isActiveAndEnabled || m_CreateButton.isActiveAndEnabled || m_QuizButton.isActiveAndEnabled))
                 {
                     m_CreateButton.gameObject.SetActive(false);
+                    m_QuizButton.gameObject.SetActive(false);
                     m_DeleteButton.gameObject.SetActive(true);
                 }
-                else if (currentFocusedObject == null && (!m_CreateButton.isActiveAndEnabled || m_DeleteButton.isActiveAndEnabled))
+                else if (currentFocusedObject == null && (!m_CreateButton.isActiveAndEnabled || m_DeleteButton.isActiveAndEnabled || !m_QuizButton.isActiveAndEnabled))
                 {
                     m_CreateButton.gameObject.SetActive(true);
+                    m_QuizButton.gameObject.SetActive(true);
                     m_DeleteButton.gameObject.SetActive(false);
                 }
             }
@@ -202,13 +277,25 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.ARStarterAssets
             }
         }
 
+        void ShowQuizMenu()
+        {
+            m_ShowQuizMenu = true;
+            m_QuizMenu.SetActive(true);
+            if (!m_QuizMenuAnimator.GetBool("Show"))
+            {
+                m_QuizMenuAnimator.SetBool("Show", true);
+            }
+        }
+
         /// <summary>
         /// Triggers hide animation for menu.
         /// </summary>
         public void HideMenu()
         {
             m_ObjectMenuAnimator.SetBool("Show", false);
+            m_QuizMenuAnimator.SetBool("Show", false);
             m_ShowObjectMenu = false;
+            m_ShowQuizMenu = false;
         }
 
         void DeleteFocusedObject()
