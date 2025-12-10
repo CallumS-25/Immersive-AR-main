@@ -147,6 +147,16 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.ARStarterAssets
         }
 
         [SerializeField]
+        [Tooltip("Button that opens the quiz menu from a quiz.")]
+        Button m_ReturnButton;
+
+        public Button returnButton
+        {
+            get => m_ReturnButton;
+            set => m_ReturnButton = value;
+        }
+
+        [SerializeField]
         [Tooltip("The interaction group for the AR demo scene.")]
         XRInteractionGroup m_InteractionGroup;
 
@@ -182,6 +192,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.ARStarterAssets
             m_CancelButton.onClick.AddListener(HideMenu);
             m_DeleteButton.onClick.AddListener(DeleteFocusedObject);
             m_QuizButton.onClick.AddListener(ShowQuizMenu);
+            m_ReturnButton.onClick.AddListener(ShowQuizMenu);
             m_QuizCancelButton.onClick.AddListener(HideMenu);
         }
 
@@ -194,6 +205,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.ARStarterAssets
             m_CancelButton.onClick.RemoveListener(HideMenu);
             m_DeleteButton.onClick.RemoveListener(DeleteFocusedObject);
             m_QuizButton.onClick.RemoveListener(ShowQuizMenu);
+            m_ReturnButton.onClick.RemoveListener(ShowQuizMenu);
             m_QuizCancelButton.onClick.RemoveListener(HideMenu);
         }
 
@@ -277,7 +289,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.ARStarterAssets
             }
         }
 
-        void ShowQuizMenu()
+        public void ShowQuizMenu()
         {
             m_ShowQuizMenu = true;
             m_QuizMenu.SetActive(true);
