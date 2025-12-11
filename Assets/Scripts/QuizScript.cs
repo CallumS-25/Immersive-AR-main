@@ -2,6 +2,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System;
+using System.Numerics;
+using UnityEngine.XR.Interaction.Toolkit.Samples.ARStarterAssets;
+using Unity.VisualScripting;
+using JetBrains.Annotations;
 
 public class QuizScript : MonoBehaviour
 {
@@ -12,7 +17,7 @@ public class QuizScript : MonoBehaviour
 
     public List<quizQuestions> questions = new List<quizQuestions>();
     
-    int currentQuestion = 0; 
+    public int currentQuestion = 0;
     int score = 0;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -25,6 +30,7 @@ public class QuizScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
 
     }
 
@@ -47,12 +53,12 @@ public class QuizScript : MonoBehaviour
         returnButton.interactable = true;
     }
 
-    public void QuizCompleted()
-    {
-        //Hoping to be able to use this.
-        //What I want to do for this is when the current question in the array of questions in the game has been answered correctly,
-        //it marks the current question bool as Completed to which you cannot access it anymore, and you can return to the quiz menu and continue with the other questions
-    }
+    //public void QuizCompleted()
+    //{
+    //    //Hoping to be able to use this.
+    //    //What I want to do for this is when the current question in the array of questions in the game has been answered correctly,
+    //    //it marks the current question bool as Completed to which you cannot access it anymore, and you can return to the quiz menu and continue with the other questions
+    //}
 
     public void returnClick()
     {
@@ -65,16 +71,54 @@ public class QuizScript : MonoBehaviour
         buttonText[0].text = questions[currentQuestion].A;
         buttonText[1].text = questions[currentQuestion].B;
         buttonText[2].text = questions[currentQuestion].C;
+        
     }
 
     [System.Serializable]
     public class quizQuestions
     {
+        public int questionNumber;
         public string Q;
         public string A;
         public string B;
         public string C;
         public char answer;
         public bool completed;
+    }
+
+    public void updateQuestionCIH()
+    {
+        currentQuestion = 0;
+        updateQuestion();
+    }
+
+    public void updateQuestionMBC()
+    {
+        currentQuestion = 1;
+        updateQuestion();
+    }
+
+    public void updateQuestionOWV()
+    {
+        currentQuestion = 2;
+        updateQuestion();
+    }
+
+    public void updateQuestionCH()
+    {
+        currentQuestion = 3;
+        updateQuestion();
+    }
+
+    public void updateQuestionKX()
+    {
+        currentQuestion = 4;
+        updateQuestion();
+    }
+
+    public void updateQuestionSBP()
+    {
+        currentQuestion = 5;
+        updateQuestion();
     }
 }
