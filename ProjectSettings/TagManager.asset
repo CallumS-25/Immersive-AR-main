@@ -5,6 +5,12 @@ TagManager:
   serializedVersion: 3
   tags:
   - hasInfo
+  - CIH
+  - MBC
+  - OWV
+  - CH
+  - KX
+  - SBP
   layers:
   - Default
   - TransparentFX

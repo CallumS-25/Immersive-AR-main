@@ -132,8 +132,8 @@ GameObject:
   - component: {fileID: 15030236}
   - component: {fileID: 15030235}
   m_Layer: 5
-  m_Name: ' OWV Quiz Button'
-  m_TagString: Untagged
+  m_Name: OWV Quiz Button
+  m_TagString: OWV
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -556,7 +556,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &147098596
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6305,7 +6305,7 @@ GameObject:
   - component: {fileID: 1714585334}
   - component: {fileID: 1714585333}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: Quiz Cancel Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6386,7 +6386,7 @@ GameObject:
   - component: {fileID: 1717555707}
   m_Layer: 5
   m_Name: CH Quiz Button
-  m_TagString: Untagged
+  m_TagString: CH
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6507,7 +6507,7 @@ GameObject:
   - component: {fileID: 1724322806}
   m_Layer: 5
   m_Name: SBP Quiz Button
-  m_TagString: Untagged
+  m_TagString: SBP
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6697,7 +6697,7 @@ GameObject:
   - component: {fileID: 1776853427}
   m_Layer: 5
   m_Name: MBC Quiz Button
-  m_TagString: Untagged
+  m_TagString: MBC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7435,7 +7435,7 @@ GameObject:
   - component: {fileID: 2023149376}
   m_Layer: 5
   m_Name: CIH Quiz Button
-  m_TagString: Untagged
+  m_TagString: CIH
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8117,7 +8117,7 @@ GameObject:
   - component: {fileID: 2142607322}
   m_Layer: 5
   m_Name: KX Quiz Button
-  m_TagString: Untagged
+  m_TagString: KX
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
