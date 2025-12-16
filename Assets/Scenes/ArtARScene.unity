@@ -6769,7 +6769,7 @@ MonoBehaviour:
     Q: What Dynasty was this Mythical Beast created in?
     A: A - Ming dynasty
     B: B - Song dynasty
-    C: C -Qing dynasty
+    C: C - Qing dynasty
     answer: 67
     completed: 0
   - questionNumber: 2
@@ -6780,25 +6780,26 @@ MonoBehaviour:
     answer: 65
     completed: 0
   - questionNumber: 3
-    Q: Please create a question for this
-    A: 
-    B: 
-    C: 
-    answer: 65
+    Q: What did the Celestial Horse "sweat"?
+    A: A - Oil
+    B: B - Blood
+    C: C - Sweat
+    answer: 66
     completed: 0
   - questionNumber: 4
-    Q: Please create a question for this
-    A: 
-    B: 
-    C: 
-    answer: 65
+    Q: 'What is Kui Xing the god of? '
+    A: A - Gold
+    B: B - War
+    C: C - Literature
+    answer: 67
     completed: 0
-  - questionNumber: 4
-    Q: 
-    A: 
-    B: 
-    C: 
-    answer: 65
+  - questionNumber: 5
+    Q: 'Saint Benedict was widely venerated by a handfull of countries by the early
+      1600s after his death. Which one of these countries was among the list? '
+    A: A - Croatia
+    B: B - Spain
+    C: C - Greece
+    answer: 66
     completed: 0
   currentQuestion: 0
 --- !u!4 &1742768666

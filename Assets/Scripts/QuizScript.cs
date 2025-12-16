@@ -2,11 +2,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using System;
-using System.Numerics;
-using UnityEngine.XR.Interaction.Toolkit.Samples.ARStarterAssets;
-using Unity.VisualScripting;
-using JetBrains.Annotations;
 
 public class QuizScript : MonoBehaviour
 {
@@ -18,7 +13,6 @@ public class QuizScript : MonoBehaviour
     public List<quizQuestions> questions = new List<quizQuestions>();
     
     public int currentQuestion = 0;
-    int score = 0;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -43,12 +37,11 @@ public class QuizScript : MonoBehaviour
     {
         if (answer[0] == questions[currentQuestion].answer)
         {
-            score += 10;
-            question.text = "Correct! You now got " + score.ToString() + " Points!";
+            question.text = "Correct!";
         }
         else
         {
-            question.text = "Incorrect... You are currently on " + score.ToString() + " Points.";
+            question.text = "Incorrect...";
         }
         returnButton.interactable = true;
     }
